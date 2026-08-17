@@ -1,0 +1,15 @@
+$cor-texto: white;
+$cor-h1: rgb(0, 140, 255);
+$cor-background: rgb(225, 0, 255);
+
+body {
+    color: $cor-texto;
+
+    h1 {
+        color: $cor-h1;
+
+        &:hover {
+            background-color: $cor-background;
+        }
+    }
+}
