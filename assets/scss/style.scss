@@ -1,0 +1,18 @@
+$cor-texto : pink;
+$cor-h1 : green;
+$cor-background : rgb(70, 13, 53);
+
+body{
+    color: $cor-texto;
+
+    // body {}
+    // body h1 {}
+    // body h1:hover{}
+
+    h1{
+        color: $cor-h1;
+        &:hover{
+            background-color: $cor-background;
+        }
+    }
+}
