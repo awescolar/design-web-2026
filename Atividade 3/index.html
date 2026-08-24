@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade Tailwind - Card</title>
+  
+  <!-- CDN do Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-6">
+
+  <!-- Container do Cartão (Requisitos: max-w-sm, rounded, shadow, p-4, bg-white, border) -->
+  <div class="max-w-sm rounded shadow p-4 bg-white border">
+    
+    <!-- Imagem (placehold) -->
+    <img 
+      src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.volleyballworld.com%2Fimage%2Fprivate%2Ft_q-best%2Fv1681981760%2Ffivb-prd%2Fdx3vskujkn8mxo1vvugj.jpg&f=1&nofb=1&ipt=499dcec7fbdc94d08c9751ae04917618642adee4153868cb7013c323d081fbf4" 
+      alt="Imagem de destaque" 
+      class="w-full rounded mb-4"
+    />
+
+    <!-- Título -->
+    <h2 class="text-xl font-bold text-gray-800 mb-2">
+      Liga das Nações de Vôlei
+    </h2>
+
+    <!-- Descrição -->
+    <p class="text-gray-600 text-sm mb-4">
+      Acompanhe as melhores seleções do mundo na disputa do título anual da VNL.
+    </p>
+
+    <!-- Botão com Requisitos e Desafio (hover:bg-blue-700) -->
+    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+      Saiba mais
+    </button>
+
+  </div>
+
+</body>
+</html>
