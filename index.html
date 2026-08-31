@@ -4,75 +4,116 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aula 1 – Tailwind</title>
+    <title>Atividade 7 – Tailwind</title>
+
     <!-- Tailwind CSS v4 (browser) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@latest/src/css/phosphor.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
 <body class="bg-gray-100 min-h-screen">
 
-    <header>
-        <div>
-            <!-- LOGO + SLOGAN -->
-            <div>
-                <h1>
-                    <a href="/"
-                        title="Instituto Federal de Educação, Ciência e Tecnologia do Estado do Rio Grande do Norte">
-                        INSTITUTO FEDERAL
+    <header class="bg-green-100 max-w-6xl mx-auto px-4 py-2 flex flex-wrap gap-4 items-center justify-between">
+        <!-- LOGO + SLOGAN -->
+        <div class="flex gap-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-green-800 no-underline">
+                <a href="/"
+                    title="Instituto Federal de Educação, Ciência e Tecnologia do Estado do Rio Grande do Norte">
+                    INSTITUTO FEDERAL
+                </a>
+            </h1>
+            <p class="slogan py-2 hidden md:block">
+                Educação, Ciência, Cultura e Tecnologia em todo o Rio Grande do Norte
+            </p>
+        </div>
+
+        <!-- MENU HAMBÚRGUER (mobile) -->
+        <button id="menuToggle" aria-label="Menu"
+            class="md:hidden bg-transparent border-none p-2 cursor-pointer rounded">
+            <i class="ph ph-list"></i>
+        </button>
+
+        <!-- NAVEGAÇÃO PRINCIPAL (desktop) -->
+        <nav aria-label="Navegação principal" class="hidden md:flex items-center gap-6">
+            <a href="#" class="text-gray-700 hover:text-green-600 transition">
+                Processos seletivos
+            </a>
+            <a href="#" class="text-gray-700 hover:text-green-600 transition">
+                Cursos
+            </a>
+            <a href="#" class="text-gray-700 hover:text-green-600 transition">
+                Campi
+            </a>
+            <a href="#" class="text-gray-700 hover:text-green-600 transition">
+                Institucional
+            </a>
+            <a href="#" class="text-gray-700 hover:text-green-600 transition">
+                Acesso à Informação
+            </a>
+            <a href="#" class="text-gray-700 hover:text-green-600 transition">
+                Eventos
+            </a>
+            <a href="#" class="text-gray-700 hover:text-green-600 transition">
+                Serviços
+            </a>
+        </nav>
+
+        <!-- AÇÕES -->
+        <div class="flex items-center gap-3">
+            <!-- ÍCONES SOCIAIS -->
+            <ul class="social flex items-center gap-2">
+                <li>
+                    <a href="#" aria-label="Instagram">
+                        <i class="ph ph-instagram-logo"></i>
                     </a>
-                </h1>
-                <p>
-                    Educação, Ciência, Cultura e Tecnologia em todo o Rio Grande do Norte
-                </p>
-            </div>
+                </li>
+                <li>
+                    <a href="#" aria-label="Twitter">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="ph ph-linkedin-logo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="YouTube">
+                        <i class="ph ph-youtube-logo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Spotify">
+                        <i class="ph ph-spotify-logo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="TikTok">
+                        <i class="ph ph-tiktok-logo"></i>
+                    </a>
+                </li>
+            </ul>
 
-            <!-- MENU HAMBÚRGUER (mobile) -->
-            <button id="menuToggle" aria-label="Menu">
-                <i class="ph ph-list"></i>
+            <!-- BUSCA -->
+            <form method="get" action="/search/" class="flex items-center bg-gray-100 rounded-full px-3 py-1 border">
+
+                <input type="search" name="query" placeholder="Busca" aria-label="Busca"
+                    class="px-3 py-1 bg-transparent focus:outline-none focus:ring-2" />
+
+                <button type="submit" aria-label="Pesquisar">
+                    <i class="ph ph-magnifying-glass"></i>
+                </button>
+
+            </form>
+
+            <!-- ALTO CONTRASTE -->
+            <button id="altocontraste" type="button" aria-label="Alto contraste" class="p-2">
+                <i class="ph ph-circle-half"></i>
             </button>
-
-            <!-- NAVEGAÇÃO PRINCIPAL (desktop) -->
-            <nav aria-label="Navegação principal">
-                <a href="#">Processos seletivos</a>
-                <a href="#">Cursos</a>
-                <a href="#">Campi</a>
-                <a href="#">Institucional</a>
-                <a href="#">Acesso à Informação</a>
-                <a href="#">Eventos</a>
-                <a href="#">Serviços</a>
-            </nav>
-
-            <!-- AÇÕES (ícones, busca, contraste, modo escuro) -->
-            <div>
-                <!-- Ícones sociais -->
-                <div>
-                    <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-                    <a href="#" aria-label="Spotify"><i class="ph ph-spotify-logo"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
-                </div>
-
-                <!-- Busca -->
-                <form method="get" action="/search/">
-                    <input type="search" name="query" placeholder="Busca" aria-label="Busca" />
-                    <button type="submit" aria-label="Pesquisar">
-                        <i class="ph ph-magnifying-glass"></i>
-                    </button>
-                </form>
-
-                <!-- Alto contraste -->
-                <button id="altocontraste" type="button" aria-label="Alto contraste">
-                    <i class="ph ph-contrast"></i>
-                </button>
-
-                <!-- Modo escuro -->
-                <button type="button" aria-label="Modo escuro">
-                    <i class="ph ph-moon"></i>
-                </button>
-            </div>
+            <!-- MODO ESCURO -->
+            <button type="button" aria-label="Modo escuro" class="p-2">
+                <i class="ph ph-moon"></i>
+            </button>
         </div>
     </header>
 
