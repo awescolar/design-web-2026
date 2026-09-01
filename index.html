@@ -2,78 +2,212 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aula 1 – Tailwind</title>
-    <!-- Tailwind CSS v4 (browser) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Header IFRN</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@latest/src/css/phosphor.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen">
+<body class="min-h-screen bg-gray-100">
 
-    <header>
-        <div>
-            <!-- LOGO + SLOGAN -->
-            <div>
-                <h1>
-                    <a href="/"
-                        title="Instituto Federal de Educação, Ciência e Tecnologia do Estado do Rio Grande do Norte">
-                        INSTITUTO FEDERAL
+    <header class="bg-green-700 text-white">
+
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="flex items-center justify-between gap-4 py-4">
+
+                <div class="flex items-center gap-6">
+
+                    <a href="/" class="no-underline">
+                        <img
+                            src="assets/img/ifrn_logo_branco.svg"
+                            alt="Instituto Federal do Rio Grande do Norte"
+                            class="w-40 sm:w-44 md:w-52"
+                        >
                     </a>
-                </h1>
-                <p>
-                    Educação, Ciência, Cultura e Tecnologia em todo o Rio Grande do Norte
-                </p>
-            </div>
 
-            <!-- MENU HAMBÚRGUER (mobile) -->
-            <button id="menuToggle" aria-label="Menu">
-                <i class="ph ph-list"></i>
-            </button>
+                    <p class="hidden md:block text-sm font-semibold leading-tight">
+                        Educação, Ciência, Cultura e Tecnologia<br>
+                        em todo o Rio Grande do Norte
+                    </p>
 
-            <!-- NAVEGAÇÃO PRINCIPAL (desktop) -->
-            <nav aria-label="Navegação principal">
-                <a href="#">Processos seletivos</a>
-                <a href="#">Cursos</a>
-                <a href="#">Campi</a>
-                <a href="#">Institucional</a>
-                <a href="#">Acesso à Informação</a>
-                <a href="#">Eventos</a>
-                <a href="#">Serviços</a>
-            </nav>
-
-            <!-- AÇÕES (ícones, busca, contraste, modo escuro) -->
-            <div>
-                <!-- Ícones sociais -->
-                <div>
-                    <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-                    <a href="#" aria-label="Spotify"><i class="ph ph-spotify-logo"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
                 </div>
 
-                <!-- Busca -->
-                <form method="get" action="/search/">
-                    <input type="search" name="query" placeholder="Busca" aria-label="Busca" />
-                    <button type="submit" aria-label="Pesquisar">
-                        <i class="ph ph-magnifying-glass"></i>
+                <button
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    class="md:hidden p-2 bg-transparent border-0 cursor-pointer text-3xl"
+                >
+                    <i class="ph ph-list"></i>
+                </button>
+
+                 <div class="flex items-center gap-2">
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                        class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-xl no-underline hover:bg-white hover:text-green-700 transition"
+                    >
+                       <img
+                        src="assets/img/instagram-logo.svg"
+                        alt="Instagram"
+                        class="w-5 h-5"
+                    >
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="X"
+                        class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-xl no-underline hover:bg-white hover:text-green-700 transition"
+                    >
+                        <i class="ph ph-x-logo"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn"
+                        class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-xl no-underline hover:bg-white hover:text-green-700 transition"
+                    >
+                        <i class="ph ph-linkedin-logo"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                        class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-xl no-underline hover:bg-white hover:text-green-700 transition"
+                    >
+                        <i class="ph ph-youtube-logo"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Spotify"
+                        class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-xl no-underline hover:bg-white hover:text-green-700 transition"
+                    >
+                        <i class="ph ph-spotify-logo"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="TikTok"
+                        class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-xl no-underline hover:bg-white hover:text-green-700 transition"
+                    >
+                        <i class="ph ph-tiktok-logo"></i>
+                    </a>
+
+                    <div class="h-8 w-px bg-white/50 mx-2"></div>
+
+                    <button
+                        id="altocontraste"
+                        type="button"
+                        aria-label="Alto contraste"
+                        class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-xl bg-transparent cursor-pointer hover:bg-white hover:text-green-700 transition"
+                    >
+                        <i class="ph ph-circle-half"></i>
                     </button>
-                </form>
 
-                <!-- Alto contraste -->
-                <button id="altocontraste" type="button" aria-label="Alto contraste">
-                    <i class="ph ph-contrast"></i>
-                </button>
+                    <button
+                        type="button"
+                        aria-label="Modo escuro"
+                        class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-xl bg-transparent cursor-pointer hover:bg-white hover:text-green-700 transition"
+                    >
+                        <i class="ph ph-moon"></i>
+                    </button>
 
-                <!-- Modo escuro -->
-                <button type="button" aria-label="Modo escuro">
-                    <i class="ph ph-moon"></i>
-                </button>
+                    <form
+                        id="busca"
+                        method="get"
+                        action="/search/"
+                        class="flex items-center bg-white rounded-full px-3 py-2 ml-2"
+                    >
+
+                        <input
+                            type="search"
+                            name="query"
+                            placeholder="Busca"
+                            aria-label="Busca"
+                            class="w-28 lg:w-36 bg-transparent text-gray-700 placeholder-gray-500 outline-none focus:ring-0"
+                        >
+
+                        <button
+                            type="submit"
+                            aria-label="Pesquisar"
+                            class="text-gray-500 text-lg bg-transparent border-0 cursor-pointer"
+                        >
+                            <i class="ph ph-magnifying-glass"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
             </div>
+
+            <div class="border-t border-white/40"></div>
+
+            <nav
+                aria-label="Navegação principal"
+                class="hidden md:flex items-center gap-6 py-4"
+            >
+
+                <a
+                    href="#"
+                    class="text-white font-semibold no-underline hover:text-green-200 transition"
+                >
+                    Processos seletivos
+                </a>
+
+                <a
+                    href="#"
+                    class="text-white font-semibold no-underline hover:text-green-200 transition"
+                >
+                    Cursos
+                </a>
+
+                <a
+                    href="#"
+                    class="text-white font-semibold no-underline hover:text-green-200 transition"
+                >
+                    Campi
+                </a>
+
+                <a
+                    href="#"
+                    class="text-white font-semibold no-underline hover:text-green-200 transition"
+                >
+                    Institucional
+                </a>
+
+                <a
+                    href="#"
+                    class="text-white font-semibold no-underline hover:text-green-200 transition"
+                >
+                    Acesso à Informação
+                </a>
+
+                <a
+                    href="#"
+                    class="text-white font-semibold no-underline hover:text-green-200 transition"
+                >
+                    Eventos
+                </a>
+
+                <a
+                    href="#"
+                    class="text-white font-semibold no-underline hover:text-green-200 transition"
+                >
+                    Serviços
+                </a>
+
+            </nav>
+
         </div>
+
     </header>
 
 </body>
