@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 # Repositório da turma de Design Web 2026
 
 
@@ -98,3 +100,4 @@ projeto/
 - Atributos de acessibilidade (`role`, `aria-label`, `focus-visible`)
 - Responsividade com mixins (mobile-first)
 - Código SCSS organizado com variáveis e aninhamento
+>>>>>>> upstream/main
