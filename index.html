@@ -1,114 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio – Notícias IFRN</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
-<body>
-
-
-    <section>
-        <header>
-            <h2>Notícias</h2>
+<body class="bg-gray-100">
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <header class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-green-900">Notícias</h2>
+            <span class="border border-green-800/30 text-green-800 text-xs font-medium px-4 py-2 rounded-full">
+                Todas as notícias →
+            </span>
         </header>
 
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <article class="bg-white/40 border border-gray-300/30 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/reuniao/400/200" alt="Reunião">
+                <div class="p-3">
+                    <header class="mb-2">
+                        <span class="text-gray-500 text-xs">Reunião</span>
+                    </header>
+                    <h3 class="text-base font-medium text-green-900 leading-5">Gestão e representação sindical dialogam sobre demandas dos servidores</h3>
+                    <p class="text-gray-700 text-xs mt-3">Encontros realizados em agosto abordaram temas relacionados ao PGD, prioridades legais, readaptação e banco de horas.</p>
+                    <time class="block text-gray-500 text-xs mt-4" datetime="2026-08-31T10:00">Há 1 hora, 3 minutos</time>
+                </div>
+            </article>
 
-        <article>
-            <img src="https://picsum.photos/seed/reuniao/400/200" alt="Reunião" />
-            <header>
-                <span>Reunião</span>
-                <time datetime="2026-08-31T10:00">Há 1 hora, 3 minutos</time>
-            </header>
-            <h3>Gestão e representação sindical dialogam sobre demandas dos servidores</h3>
-            <p>Encontros realizados em agosto abordaram temas relacionados ao PGD, prioridades legais, readaptação e
-                banco de horas.</p>
-        </article>
+            <article class="bg-white/40 border border-gray-300/30 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/cultura/400/200" alt="Arte e Cultura">
+                <div class="p-3">
+                    <header class="mb-2">
+                        <span class="text-gray-500 text-xs">Arte e Cultura</span>
+                    </header>
+                    <h3 class="text-base font-medium text-green-900 leading-5">Intercâmbio entre museus de brinquedos populares tem programação gratuita em Natal</h3>
+                    <p class="text-gray-700 text-xs mt-3">Atividades acontecem nesta sexta-feira (28) e sábado (29), no Centro de Tecnologia e Cultura do IFRN</p>
+                    <time class="block text-gray-500 text-xs mt-4" datetime="2026-08-27T14:00">Há 4 dias</time>
+                </div>
+            </article>
 
+            <article class="bg-white/40 border border-gray-300/30 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/intercampi/400/200" alt="Jogos Intercampi">
+                <div class="p-3">
+                    <header class="mb-2">
+                        <span class="text-gray-500 text-xs">Jogos Intercampi Estudantis 2026</span>
+                    </header>
+                    <h3 class="text-base font-medium text-green-900 leading-5">Intercampi chega ao fim com definição das últimas medalhas</h3>
+                    <p class="text-gray-700 text-xs mt-3">Resultados de sexta-feira e sábado encerraram a fase final estadual</p>
+                    <time class="block text-gray-500 text-xs mt-4" datetime="2026-08-31T09:00">Há 1 hora, 45 minutos</time>
+                </div>
+            </article>
 
-        <article>
-            <img src="https://picsum.photos/seed/cultura/400/200" alt="Arte e Cultura" />
-            <header>
-                <span>Arte e Cultura</span>
-                <time datetime="2026-08-27T14:00">Há 4 dias</time>
-            </header>
-            <h3>Intercâmbio entre museus de brinquedos populares tem programação gratuita em Natal</h3>
-            <p>Atividades acontecem nesta sexta-feira (28) e sábado (29), no Centro de Tecnologia e Cultura do IFRN</p>
-        </article>
+            <article class="bg-white/40 border border-gray-300/30 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/alinhamento/400/200" alt="Alinhamento">
+                <div class="p-3">
+                    <header class="mb-2">
+                        <span class="text-gray-500 text-xs">Alinhamento</span>
+                    </header>
+                    <h3 class="text-base font-medium text-green-900 leading-5">Comissão de docentes realiza encontro presencial com capacitação</h3>
+                    <p class="text-gray-700 text-xs mt-3">Programação reúne integrantes para discutir o regimento interno e aprofundar conhecimentos sobre processos relacionados à carreira docente.</p>
+                    <time class="block text-gray-500 text-xs mt-4" datetime="2026-08-27T15:00">Há 4 dias, 1 hora</time>
+                </div>
+            </article>
 
+            <article class="bg-white/40 border border-gray-300/30 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/campus/400/200" alt="Campus Santa Cruz">
+                <div class="p-3">
+                    <header class="mb-2">
+                        <span class="text-gray-500 text-xs">Campus Santa Cruz</span>
+                    </header>
+                    <h3 class="text-base font-medium text-green-900 leading-5">IFRN sediou eventos sobre acessibilidade e inclusão na educação</h3>
+                    <p class="text-gray-700 text-xs mt-3">Programação ocorreu entre os dias 26 e 28 de agosto, no Campus Santa Cruz</p>
+                    <time class="block text-gray-500 text-xs mt-4" datetime="2026-08-30T08:00">Há 20 horas</time>
+                </div>
+            </article>
 
-        <article>
-            <img src="https://picsum.photos/seed/intercampi/400/200" alt="Jogos Intercampi" />
-            <header>
-                <span>Jogos Intercampi Estudantis 2026</span>
-                <time datetime="2026-08-31T09:00">Há 1 hora, 45 minutos</time>
-            </header>
-            <h3>Intercampi chega ao fim com definição das últimas medalhas</h3>
-            <p>Resultados de sexta-feira e sábado encerraram a fase final estadual</p>
-        </article>
+            <article class="bg-white/40 border border-gray-300/30 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/judo/400/200" alt="Judô">
+                <div class="p-3">
+                    <header class="mb-2">
+                        <span class="text-gray-500 text-xs">Intercampi 2026</span>
+                    </header>
+                    <h3 class="text-base font-medium text-green-900 leading-5">Judô estreia e futebol define classificados nos Jogos Intercampi</h3>
+                    <p class="text-gray-700 text-xs mt-3">Quinta-feira reúne estreia da modalidade e rodadas que encaminham as semifinais da fase final</p>
+                    <time class="block text-gray-500 text-xs mt-4" datetime="2026-08-27T16:00">Há 4 dias, 16 horas</time>
+                </div>
+            </article>
 
+            <article class="bg-white/40 border border-gray-300/30 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/evento/400/200" alt="Evento">
+                <div class="p-3">
+                    <header class="mb-2">
+                        <span class="text-gray-500 text-xs">Evento</span>
+                    </header>
+                    <h3 class="text-base font-medium text-green-900 leading-5">III Encontro de Assessores de Projetos de Ensino reúne representantes dos 22 Campi na Reitoria</h3>
+                    <p class="text-gray-700 text-xs mt-3">O evento promoveu formação, troca de experiências e discussões sobre a regulamentação e o acompanhamento dos Projetos de Ensino no Instituto.</p>
+                    <time class="block text-gray-500 text-xs mt-4" datetime="2026-08-28T10:00">Há 3 dias, 22 horas</time>
+                </div>
+            </article>
 
-        <article>
-            <img src="https://picsum.photos/seed/alinhamento/400/200" alt="Alinhamento" />
-            <header>
-                <span>Alinhamento</span>
-                <time datetime="2026-08-27T15:00">Há 4 dias, 1 hora</time>
-            </header>
-            <h3>Comissão de docentes realiza encontro presencial com capacitação</h3>
-            <p>Programação reúne integrantes para discutir o regimento interno e aprofundar conhecimentos sobre
-                processos relacionados à carreira docente.</p>
-        </article>
-
-
-        <article>
-            <img src="https://picsum.photos/seed/campus/400/200" alt="Campus Santa Cruz" />
-            <header>
-                <span>Campus Santa Cruz</span>
-                <time datetime="2026-08-30T08:00">Há 20 horas</time>
-            </header>
-            <h3>IFRN sediou eventos sobre acessibilidade e inclusão na educação</h3>
-            <p>Programação ocorreu entre os dias 26 e 28 de agosto, no Campus Santa Cruz</p>
-        </article>
-
-
-        <article>
-            <img src="https://picsum.photos/seed/judo/400/200" alt="Judô" />
-            <header>
-                <span>Intercampi 2026</span>
-                <time datetime="2026-08-27T16:00">Há 4 dias, 16 horas</time>
-            </header>
-            <h3>Judô estreia e futebol define classificados nos Jogos Intercampi</h3>
-            <p>Quinta-feira reúne estreia da modalidade e rodadas que encaminham as semifinais da fase final</p>
-        </article>
-
-
-        <article>
-            <img src="https://picsum.photos/seed/evento/400/200" alt="Evento" />
-            <header>
-                <span>Evento</span>
-                <time datetime="2026-08-28T10:00">Há 3 dias, 22 horas</time>
-            </header>
-            <h3>III Encontro de Assessores de Projetos de Ensino reúne representantes dos 22 Campi na Reitoria</h3>
-            <p>O evento promoveu formação, troca de experiências e discussões sobre a regulamentação e o acompanhamento
-                dos Projetos de Ensino no Instituto.</p>
-        </article>
-
-
-        <article>
-            <img src="https://picsum.photos/seed/jee/400/200" alt="JEE 2026" />
-            <header>
-                <span>JEE 2026</span>
-                <time datetime="2026-08-26T18:00">Há 5 dias, 12 horas</time>
-            </header>
-            <h3>Novas modalidades ampliam programação dos Jogos Intercampi nesta quarta-feira</h3>
-            <p>Segundo dia da fase final teve provas individuais, disputas coletivas e continuidade das rodadas
-                classificatórias</p>
-        </article>
-    </section>
-
+            <article class="bg-white/40 border border-gray-300/30 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition duration-300">
+                <img class="w-full h-40 object-cover" src="https://picsum.photos/seed/jee/400/200" alt="JEE 2026">
+                <div class="p-3">
+                    <header class="mb-2">
+                        <span class="text-gray-500 text-xs">JEE 2026</span>
+                    </header>
+                    <h3 class="text-base font-medium text-green-900 leading-5">Novas modalidades ampliam programação dos Jogos Intercampi nesta quarta-feira</h3>
+                    <p class="text-gray-700 text-xs mt-3">Segundo dia da fase final teve provas individuais, disputas coletivas e continuidade das rodadas classificatórias</p>
+                    <time class="block text-gray-500 text-xs mt-4" datetime="2026-08-26T18:00">Há 5 dias, 12 horas</time>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
-
 </html>
