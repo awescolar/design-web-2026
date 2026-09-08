@@ -1,0 +1,95 @@
+$primary-color: #2563eb;
+$secondary-color: #1e293b;
+$background-color: #f8fafc;
+$card-color: #ffffff;
+$text-color: #334155;
+$white: #ffffff;
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.header {
+    background-color: $secondary-color;
+}
+
+.logo,
+.nav-list a {
+    color: $white;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-list a {
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #60a5fa;
+}
+
+.hero h2 {
+    color: $primary-color;
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.subtitle {
+    color: $primary-color;
+    font-weight: bold;
+}
+
+.hero p {
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: $primary-color;
+    color: $white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #1d4ed8;
+}
+
+.profile-image {
+    border: 5px solid $primary-color;
+}
+
+.section-alt {
+    background-color: #e2e8f0;
+}
+
+.section-title {
+    color: $secondary-color;
+    font-size: 2rem;
+}
+
+.card {
+    background-color: $card-color;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: $primary-color;
+    margin-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+.footer {
+    background-color: $secondary-color;
+    color: $white;
+}
