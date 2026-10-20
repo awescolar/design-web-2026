@@ -1,0 +1,14 @@
+$texto : rgba(158, 9, 158, 0.87);
+$cor-h1 : rgb(67, 1, 143);
+$cor-background : rgba(9, 103, 158, 0.87);
+
+body{
+    color: $cor-texto;
+
+    h1{
+        color: $cor-h1;
+        &hover{
+            background-color: $cor-background;
+        }
+    }
+}
