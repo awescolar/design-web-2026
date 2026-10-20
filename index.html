@@ -61,12 +61,10 @@
         }
       },
 
-      // ==========================================
-      // as ações da calculadora
-      // ==========================================
+     
       methods: {
 
-        // Reseta a calculadora ao estado inicial.
+        
         clear() {
           this.display = '0';
           this.firstOperand = null;
@@ -74,49 +72,48 @@
           this.waitingForSecond = false;
         },
 
-        // TODO 1 — Digita um dígito no visor.
+        
         appendDigit(digit) {
-          // Se estiver mostrando um erro, começa um novo número.
+         
           if (this.display === 'Erro') {
             this.clear();
           }
 
-          // Se estiver esperando o segundo número,
-          // substitui o valor do visor pelo novo dígito.
+        
+        
           if (this.waitingForSecond) {
             this.display = digit;
             this.waitingForSecond = false;
           } else if (this.display === '0') {
-            // Evita colocar zeros antes do número.
+            
             this.display = digit;
           } else {
-            // Junta o novo dígito ao número que já está no visor.
+            
             this.display = this.display + digit;
           }
         },
 
-        // TODO 2 — Registra o operador pendente.
+      
         setOperator(op) {
-          // Não faz nada se o visor estiver mostrando erro.
+          
           if (this.display === 'Erro') {
             return;
           }
 
-          // Se já existir uma operação pendente,
-          // calcula primeiro o resultado dela.
+         
+         
           if (this.operator !== null && !this.waitingForSecond) {
             this.calculate();
           }
 
-          // Guarda o primeiro número e o operador escolhido.
           this.firstOperand = parseFloat(this.display);
           this.operator = op;
           this.waitingForSecond = true;
         },
 
-        // TODO 3 — Executa a operação pendente.
+        
         calculate() {
-          // Verifica se existe uma operação para calcular.
+         
           if (this.operator === null || this.firstOperand === null) {
             return;
           }
@@ -125,7 +122,7 @@
           const b = parseFloat(this.display);
           let resultado;
 
-          // Realiza a operação escolhida.
+         
           if (this.operator === '+') {
             resultado = a + b;
           } else if (this.operator === '-') {
@@ -140,10 +137,10 @@
             }
           }
 
-          // Mostra o resultado no visor.
+          
           this.display = String(resultado);
 
-          // Limpa os dados da operação anterior.
+          
           this.firstOperand = null;
           this.operator = null;
           this.waitingForSecond = true;
