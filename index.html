@@ -133,22 +133,24 @@
         //  5. Chame this.limparCampo()
         // ==========================================
         adicionarOficina() {
+          // ... seu código aqui
+
           adicionarOficina() {
-  const titulo = this.novaOficina.trim();
+    const titulo = this.novaOficina.trim();
 
-  if (titulo === '') {
-    return;
-  }
+    if (titulo === '') {
+        return;
+    }
 
-  this.oficinas.push({
-    id: this.proximoId,
-    titulo: titulo,
-    favorita: false
-  });
+    this.oficinas.push({
+        id: this.proximoId,
+        titulo: titulo,
+        favorita: false
+    });
 
-  this.proximoId++;
+    this.proximoId++;
 
-  this.limparCampo();
+    this.limparCampo();
 },
         },
 
@@ -167,6 +169,15 @@
         // ==========================================
         alternarFavorito(id) {
           // ... seu código aqui
+          alternarFavorito(id) {
+    const oficina = this.oficinas.find(item => item.id === id);
+
+    if (!oficina) {
+        return;
+    }
+
+    oficina.favorita = !oficina.favorita;
+},
         },
 
         // ==========================================
@@ -189,4 +200,4 @@
   </script>
 </body>
 
-</html> 
+</html>
